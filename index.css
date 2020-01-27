@@ -54,10 +54,10 @@ height:auto;
 padding:5% 20%;
 color:white;
 font-family: 'Montserrat', sans-serif;
-
 position:relative;
 top:-20vh;
 }
+
 #profile-image{
 width:180px;
 height:180px;
@@ -226,6 +226,11 @@ width:92%;
 padding:20px 3.8%;
 font-size:18px;
 padding-top:10px;
+}
+
+.p-text ul li{
+  font-size:18px;
+
 }
 .p-bottom{
 width:100%;
