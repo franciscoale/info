@@ -1,178 +1,314 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Francisco Alé Palacios | Portfolio</title>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-</head>
-<body>
-    <div id="header">
-        <center>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa:700"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="index.css" />
+    <link rel="shortcut icon" href="images/iconblack.png" type="image/x-icon">
+    <link rel="icon" href="images/iconblack.png" type="image/x-icon">
+  </head>
+  <body>
+    <div id="loading">
+      <div id="spinner">
+      </div>
+    </div>
+    <div id="particles-js"></div>
+    <div id="box">
+      <div
+        class="box1 onlywide animated bounceOutLeft"
+        style="animation-delay:1.7s;"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutLeft"
+        style="animation-delay:1.8s;"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutLeft"
+        style="animation-delay:1.9s;"
+      ></div>
+      <div
+        class="box2 animated bounceOutRight"
+        style="animation-delay:1.9s;"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutRight"
+        style="animation-delay:1.8s;"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutRight"
+        style="animation-delay:1.7s;"
+      ></div>
+    </div>
+    <a
+      id="about"
+      onclick="showabout()"
+      class="animated fadeIn"
+      style="animation-delay:2.2s;"
+      >Sobre mí</a
+    >
+    <a
+      id="work"
+      onclick="showwork()"
+      class="animated fadeIn"
+      style="animation-delay:2.2s;"
+      >Mis Trabajos</a
+    >
+    <div id="middle" style="animation-delay:0.0s;">
+      <h1 >Francisco Alé Palacios</h1>
+      
+      <div id="menu">
+        <a onclick="showabout()">Sobre mí.</a>
+        <a onclick="showwork()">Mis Trabajos</a>
+      </div>
+      <table>
+        <tr>
+          <td class="animated zoomIn" style="animation-delay:0.2s;">
+            <a href="https://github.com/franciscoale/" target="_blank"  class="social" ><i class="fab fa-github"></i></a>
+          </td>
+          <td class="animated zoomIn" style="animation-delay:0.4s;">
+            <a href="https://twitter.com/LordPatatah" target="_blank" class="social"><i class="fab fa-twitter"></i></a>
+          </td>
+          <td class="animated zoomIn" style="animation-delay:0.6s;">
+            <a href="https://www.instagram.com/curro_ale/" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
+          </td>
+          
+        </tr>
+      </table>
+    </div>
+    <div id="work_container" class="container">
+    
+      <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+      <section>
         
-        <div id="links">
-            <a href="#"><i class="fas fa-home"></i></a>
-            
-        </div>
-        </center>
-    </div>
-    <div id="background"></div>
-    <div id="scroll-to"></div>
-    <div id="bottom"></div>
-    <div id="profile">
-        <div id="profile-image"></div>
-        <div id="userdata">
-        <div id="username">Francisco Alé Palacios </div>
-        <div id="about">
-        Estudiante de Ingeniería Informatica - Ingeniería del Software en la Universidad de Sevilla.
-        <div id="location"><i class="fas fa-map-marker-alt location"></i> Sevilla, España</div>
-        <div id="website"><i class="fab fa-github"></i><a style="text-decoration: none; color: aliceblue; " target="_blank" href="https://github.com/franciscoale/"> https://github.com/franciscoale/</a> </div>
-        <div id="email"><i class="far fa-envelope"></i><a href="mailto:fraalepal@hotmail.com" target="_blank" style="text-decoration: none; color: aliceblue;"> fraalepal@hotmail.com</a> </div>
-        </div>
-        <div id="f-data">
-         <table>
-                <tr>
-                    <td>3<br><b>Finalizados</b></td>
-                    <td>1<br><b>Revisando</b></td>
-                    <td>1<br><b>Progreso</b></td>
-                </tr>
-         </table>
-        </div>
-    </div>
-    </div>
-    <div id="posts">
-
-        <div class="p-data">
-                <img src="images/ADMINAPP.png" width="100%" height="auto">
+          <h1 style="color: #48CA8F;">4. Mis Trabajos________</h1>
+          <div class="p-data">
+            <img src="images/ADMINAPP.png" width="100%" height="auto" />
             <div class="p-top">
-                <div class="p-userimg"></div>
-                <div class="p-username">Admin App </div><div class="p-time">2019</div><hr>
+              <div class="p-userimg"></div>
+              <div class="p-username">Admin App</div>
+              <div class="p-time">2019</div>
+              <hr />
             </div>
             <div class="p-text">
-                Aplicación Web de gestión empresarial construida con:
+              Aplicación Web de gestión empresarial construida con:
             </div>
             <div class="p-text">
-                <ul>
-                    <li>Adobe XD (Diseño de la interfaz de usuario)</li>
-                    <li>PHP</li>
-                    <li>MySQL</li>
-                    <li>HTML5, CSS3</li>
-                    <li>JavaScript</li>
-                    <li>Servidor XAMPP</li>
-                </ul>
+              <ul>
+                <li>Adobe XD (Diseño de la interfaz de usuario)</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>HTML5, CSS3</li>
+                <li>JavaScript</li>
+                <li>Servidor XAMPP</li>
+              </ul>
             </div>
             <div class="p-text">
-                Incluye gestión de clientes, proveedores, servicios, trabajadores (crear, consultar, editar y eliminar), además de un calendario para la creación de eventos.
-            </div><hr>
-            <div class="p-text">
-                <center><a href="mailto:fraalepal@hotmail.com" class="myButton">Solicitar información</a></center>
+              Incluye gestión de clientes, proveedores, servicios, trabajadores
+              (crear, consultar, editar y eliminar), además de un calendario
+              para la creación de eventos.
             </div>
-        </div>
+            <hr />
+            <div class="p-text">
+              <center>
+                <a href="mailto:fraalepal@hotmail.com" class="myButton"
+                  >Solicitar información</a
+                >
+              </center>
+            </div>
+          </div>
 
           <div class="p-data">
-                <img src="images/maqueta.png" width="100%" height="auto">
+            <img src="images/maqueta.png" width="100%" height="auto" />
             <div class="p-top">
-                <div class="p-userimg"></div>
-                <div class="p-username">Utrera en Navidad</div><div class="p-time">2019</div><hr>
+              <div class="p-userimg"></div>
+              <div class="p-username">Utrera en Navidad</div>
+              <div class="p-time">2019</div>
+              <hr />
             </div>
             <div class="p-text">
-                Aplicación Android para el seguimiento de los eventos navideños de Utrera contruida con:
+              Aplicación Android para el seguimiento de los eventos navideños de
+              Utrera contruida con:
             </div>
             <div class="p-text">
-                <ul>
-                    <li>Proto.io (Diseño de la interfaz de usuario)</li>
-                    <li>Java</li>
-                    <li>Firebase</li>
-                    <li>Android Studio</li>
-                </ul>
+              <ul>
+                <li>Proto.io (Diseño de la interfaz de usuario)</li>
+                <li>Java</li>
+                <li>Firebase</li>
+                <li>Android Studio</li>
+              </ul>
             </div>
             <div class="p-text">
-                Consulta y actualización de datos en tiempo real sin refrescos.
-            </div><hr>
-            <div class="p-text">
-                <center><a href="https://play.google.com/store/apps/details?id=com.softloyal.navidadutrera" class="myButton">Descargar Aplicación</a></center>
+              Consulta y actualización de datos en tiempo real sin refrescos.
             </div>
-        </div>
-        
-        <div class="p-data">
-            <img src="images/subsave.png" width="100%" height="auto">
-        <div class="p-top">
-            <div class="p-userimg"></div>
-            <div class="p-username">Subsave</div><div class="p-time">2020</div><hr>
-        </div>
-        <div class="p-text">
-            Aplicación Android para gestionar suscripciones construida con:
-        </div>
-        <div class="p-text">
-            <ul>
+            <hr />
+            <div class="p-text">
+              <center>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.softloyal.navidadutrera"
+                  class="myButton"
+                  >Descargar Aplicación</a
+                >
+              </center>
+            </div>
+          </div>
+
+          <div class="p-data">
+            <img src="images/subsave.png" width="100%" height="auto" />
+            <div class="p-top">
+              <div class="p-userimg"></div>
+              <div class="p-username">Subsave</div>
+              <div class="p-time">2020</div>
+              <hr />
+            </div>
+            <div class="p-text">
+              Aplicación Android para gestionar suscripciones construida con:
+            </div>
+            <div class="p-text">
+              <ul>
                 <li>Adobe XD (Diseño de la interfaz de usuario)</li>
                 <li>Java</li>
                 <li>SQLite</li>
                 <li>Android Studio</li>
-            </ul>
-        </div>
-        <div class="p-text">
-            Enfoque prático de las operaciones CRUD de SQLite en Java.
-        </div>
-        <hr>
-            <div class="p-text">
-                <center><a href="#" class="myButton">Proximamente</a></center>
+              </ul>
             </div>
-        </div>
+            <div class="p-text">
+              Enfoque prático de las operaciones CRUD de SQLite en Java.
+            </div>
+            <hr />
+            <div class="p-text">
+              <center><a href="#" class="myButton">Proximamente</a></center>
+            </div>
+          </div>
 
-        <div class="p-data">
-            <img src="images/ferreteria.png" width="100%" height="auto">
-        <div class="p-top">
-            <div class="p-userconst"></div>
-            <div class="p-username">Tienda Online Ferretería</div><div class="p-time">2020</div><hr>
-        </div>
-        <div class="p-text">
-            Ferreteria Online contruida con:
-        </div>
-        <div class="p-text">
-            <ul>
-        
+          <div class="p-data">
+            <img src="images/ferreteria.png" width="100%" height="auto" />
+            <div class="p-top">
+              <div class="p-userconst"></div>
+              <div class="p-username">Tienda Online Ferretería</div>
+              <div class="p-time">2020</div>
+              <hr />
+            </div>
+            <div class="p-text">
+              Ferreteria Online contruida con:
+            </div>
+            <div class="p-text">
+              <ul>
                 <li>WordPress</li>
                 <li>WooCommerce</li>
                 <li>WPForms7</li>
-            </ul>
-        </div>
-        <div class="p-text">
-            Cuenta con una sección estática de información acerca de la entidad y con una sección de tienda donde se pueden adquirir los productos disponibles.
-        </div>
-        <hr>
+              </ul>
+            </div>
             <div class="p-text">
-                <center><a href="#" class="myButton">Visitar Web</a></center>
+              Cuenta con una sección estática de información acerca de la
+              entidad y con una sección de tienda donde se pueden adquirir los
+              productos disponibles.
+            </div>
+            <hr />
+            <div class="p-text">
+              <center><a href="#" class="myButton">Visitar Web</a></center>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <div id="about_container" class="container">
+      <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+      <h1>1. Información __________________</h1>
+      <section>
+        <!--<img style="width: 20%; border-radius: 500px;" src="images/curro.jpg"></img>-->
+        <div class="datos">
+            <div id="nombre">Francisco Alé Palacios </div>
+            <div id="sobremi">
+            Estudiante de Ingeniería Informatica - Ingeniería del Software en la Universidad de Sevilla.
+            <div id="info"><i class="fas fa-map-marker-alt location" style="margin-right: 5px;"></i>  Sevilla, España</div>
+            <div id="info"><i class="fab fa-github"></i><a style="text-decoration: none; margin-left: 5px; " target="_blank" href="https://github.com/franciscoale/">  https://github.com/franciscoale/</a> </div>
+            </div>
+            <div id="projects-data">
+             <table>
+                    <tr>
+                        <td><b>Nº de proyectos <strong style="color: #48CA8F;">Finalizados</strong>: 3</b></td>
+                        
+                    </tr>
+                    <tr>
+                        <td><b>Nº de proyectos en <strong style="color: #48CA8F;">Revisión</strong>: 1</b></td>
+                        
+                    </tr>
+                    <tr>
+                        <td><b>Nº de proyectos <strong style="color: #48CA8F;">En Progreso</strong>: 1</b></td>
+                        
+                    </tr>
+             </table>
             </div>
         </div>
+        
+        
+      </section>
+      <section>
+        <h1>2. Habilidades ________</h1>
+        <h2>2.1 Tecnologías</h2>
+        <p>Estas son algunas de las tecnologías que utilizo con más frecuencia:</p>
+        <p><i style="color: #48CA8F;" class="fas fa-angle-right"> </i> Java</p>
+        <p><i style="color: #48CA8F;" class="fas fa-angle-right"> </i> Java for Android</p>
+        <p><i style="color: #48CA8F;" class="fas fa-angle-right"> </i> PHP</p>
+        <p><i style="color: #48CA8F;" class="fas fa-angle-right"> </i> JavaScript</p>
+        <p><i style="color: #48CA8F;" class="fas fa-angle-right"> </i> HTML & CSS</p>
+        <p><i style="color: #48CA8F;" class="fas fa-angle-right"> </i> MySQL</p>
+        <p><i style="color: #48CA8F;" class="fas fa-angle-right"> </i> Oracle SQL Developer</p>
+        <p><i style="color: #48CA8F;" class="fas fa-angle-right"> </i> Firebase</p>
+        <br>
+        <h2>2.2 Diseño</h2>
+        <p>Estas son las herramientas que utilizo para el diseño de Interfaces de usuario:</p>
+        <p><i style="color: #48CA8F;" class="fas fa-angle-right"> </i> Photoshop</p>
+        <p><i style="color: #48CA8F;" class="fas fa-angle-right"> </i> Adobe XD</p>
+        <p><i style="color: #48CA8F;" class="fas fa-angle-right"> </i> Proto.io</p>
+      </section>
+      <section>
+        <h1>3. Cursos _________</h1><br><hr>
+        <p>Introducción al Desarrollo Web I</p>
+        <p style="font-style: italic;">Instituto de Economía Internacional - Google Activate</p>
+        <p style="font-style: italic;">Mayo de 2019.</p>
+        <p style="font-style: italic;">ID de la credencial: JCQ BTD TCH</p><hr>
+        <p>Introducción al Desarrollo Web II</p>
+        <p style="font-style: italic;">Instituto de Economía Internacional - Google Activate</p>
+        <p style="font-style: italic;">Junio de 2019.</p>
+        <p style="font-style: italic;">ID de la credencial: SEC 5NM R3X</p><hr>
+        <p>Desarrollo de Apps Móviles</p>
+        <p style="font-style: italic;">Universidad Complutense de Madrid - Google Activate</p>
+        <p style="font-style: italic;">Octubre de 2019.</p>
+        <p style="font-style: italic;">ID de la credencial: 7P7 44L UJZ</p><hr>
 
+      </section>
+      <section>
+        <h1>4. Contacto _________</h1>
+        <div id="info"><i class="far fa-envelope"></i><a href="mailto:fraalepal@hotmail.com" target="_blank" style="text-decoration: none; color: aliceblue; margin-left: 5px;">  fraalepal@hotmail.com</a> </div>
+
+      </section>
     </div>
 
-<script>
-$(window).scroll(function() {
-var hT = $('#scroll-to').offset().top,
-hH = $('#scroll-to').outerHeight(),
-wH = $(window).height(),
-wS = $(this).scrollTop();
-if (wS > (hT+hH-wH) && (hT < wS) && (wS+wH > hT+hH)){
-$("#header").css("background","#000");
-$("#header").css("padding","2% 5%");
-$("#header").css("box-shadow","0px 10px 30px rgba(0,0,0,0.6)");
-}else{
-$("#header").css("background","transparent");
-$("#header").css("padding","5%");
-$("#header").css("box-shadow","0px 0px 0px rgba(0,0,0,0)");
-}
-});
-</script>
-</body>
-<footer>
-</footer>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
